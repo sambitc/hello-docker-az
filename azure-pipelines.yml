@@ -29,3 +29,8 @@ steps:
     Dockerfile: '**/Dockerfile'
     tags: 'az'
 
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'k8files'
+    publishLocation: 'pipeline'
